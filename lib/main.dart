@@ -16,6 +16,7 @@ class CubitsProvider extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => UsernameCubit(),),
         BlocProvider(create: (context) => RouterSimpleCubit(),),
+        BlocProvider(create: (context) => CounterCubit(),)
 
       ],
       child: const MyApp(),
