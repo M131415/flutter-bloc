@@ -10,7 +10,7 @@ class CubitScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final newUsername = context.watch<UsernameCubit>();
+    // final newUsername = context.watch<UsernameCubit>();
 
     return Scaffold(
       appBar: AppBar(
