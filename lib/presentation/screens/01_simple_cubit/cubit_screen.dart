@@ -17,16 +17,20 @@ class CubitScreen extends StatelessWidget {
         title: const Text('Cubit'),
       ),
       body: Center(
-        child: Text(newUsername.state),
+        child: BlocBuilder<UsernameCubit, String>(
+          builder: (context, estado) {
+            return Text(estado);
+          },
+        )
       ),
       floatingActionButton: 
         FloatingActionButton(
           onPressed: (){
-
-            newUsername.setUsername(
+            context.read<UsernameCubit>().setUsername(
               RandomGenerator.getRandomName()
             );
-
+            // newUsername.setUsername(
+            // RandomGenerator.getRandomName()
           }, 
           child: const Icon(Icons.refresh,),
         )
